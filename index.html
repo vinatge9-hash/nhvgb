@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Coffee - Home</title>
+  <meta name="description" content="A modern, friendly cafe with craft coffee, online ordering, locations, loyalty, events, and more." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6D4C41',
+            secondary: '#C68642',
+            accent: '#D97706',
+            background: '#F8F3EE',
+            surface: '#FFFFFF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Small custom utilities to support glass-like sticky nav across pages */
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: saturate(1.2) blur(8px);
+      -webkit-backdrop-filter: saturate(1.2) blur(8px);
+    }
+  </style>
+  <!-- SEO / structured data could go here -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Local Coffee",
+    "description": "A welcoming cafe offering craft coffee, online ordering, loyalty, and events.",
+    "url": "https://example.com/",
+    "logo": "https://example.com/assets/images/logo.png"
+  }
+  </script>
+</head>
+<body class="bg-[#F8F3EE] text-[#1F2937] font-sans min-h-full">
+  <!-- Header (Component: Header, NavBar) -->
+  <header class="sticky top-0 z-50 w-full glass border-b border-white/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Brand -->
+        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold text-primary" aria-label="Home">
+          <!-- Inline Coffee Icon -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-label="Coffee" role="img">
+            <path d="M3 6h11a4 4 0 0 1 0 8H3V6Z" stroke="#6D4C41" stroke-width="2" fill="none"/>
+            <path d="M8 6V4a4 4 0 0 1 8 0v2" stroke="#6D4C41" stroke-width="2" fill="none"/>
+            <path d="M5 14h8a4 4 0 1 1 0 8H5" stroke="#6D4C41" stroke-width="2" fill="none"/>
+          </svg>
+          Local Coffee
+        </a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center space-x-6" aria-label="Primary">
+          <a href="index.html" class="text-sm hover:underline px-2 py-1 rounded">Home</a>
+          <a href="menu.html" class="text-sm hover:underline px-2 py-1 rounded">Menu</a>
+          <a href="order-online.html" class="text-sm hover:underline px-2 py-1 rounded">Order Online</a>
+          <a href="locations.html" class="text-sm hover:underline px-2 py-1 rounded">Locations</a>
+          <a href="about.html" class="text-sm hover:underline px-2 py-1 rounded">About</a>
+          <a href="loyalty.html" class="text-sm hover:underline px-2 py-1 rounded">Loyalty</a>
+          <a href="events-blog.html" class="text-sm hover:underline px-2 py-1 rounded">Events</a>
+          <a href="contact.html" class="text-sm hover:underline px-2 py-1 rounded">Contact</a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded bg-white/80 hover:bg-white/90 border border-gray-200" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18"/>
+            <path d="M3 12h18"/>
+            <path d="M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/90 border-b border-gray-200">
+      <div class="px-4 pt-2 pb-4 space-y-1">
+        <a href="index.html" class="block px-2 py-2 rounded hover:bg-gray-100">Home</a>
+        <a href="menu.html" class="block px-2 py-2 rounded hover:bg-gray-100">Menu</a>
+        <a href="order-online.html" class="block px-2 py-2 rounded hover:bg-gray-100">Order Online</a>
+        <a href="locations.html" class="block px-2 py-2 rounded hover:bg-gray-100">Locations</a>
+        <a href="about.html" class="block px-2 py-2 rounded hover:bg-gray-100">About</a>
+        <a href="loyalty.html" class="block px-2 py-2 rounded hover:bg-gray-100">Loyalty</a>
+        <a href="events-blog.html" class="block px-2 py-2 rounded hover:bg-gray-100">Events</a>
+        <a href="contact.html" class="block px-2 py-2 rounded hover:bg-gray-100">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero Section (Component: HeroSection) -->
+    <section id="hero" class="relative bg-center bg-cover" style="background-image: radial-gradient(circle at 30% 20%, rgba(109,76,65,.15), transparent 40%), url('https://images.unsplash.com/photo-1506602506594-6c8f9f3f7f7f?q=80&w=1600&auto=format&fit=crop'); min-height: 60vh;">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/60 via-white/40 to-white/60"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 py-28 md:py-40 text-left">
+        <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-primary mb-4" data-animate="true">Coffee that tells a story</h1>
+        <p class="text-lg md:text-xl text-[#1F2937]/80 max-w-2xl" data-animate="true">
+          Sourced from ethical farms, roasted in-house, and crafted with care. Order online for pickup or delivery.
+        </p>
+        <div class="mt-6 space-x-4" data-animate="true">
+          <a href="order-online.html" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-full shadow hover:shadow-lg transition-all">Order Online</a>
+          <a href="menu.html" class="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all">View Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Highlights (Component: FeatureHighlight) -->
+    <section class="max-w-7xl mx-auto px-4 py-12" aria-label="Highlights">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all js-animate" data-animate="true">
+          <div class="mb-2 w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-label="Roast" stroke="#D97706" stroke-width="2"><path d="M3 12h12"/><path d="M9 6h6"/><path d="M9 18h6"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold">Small-batch Roasts</h3>
+          <p class="text-sm text-gray-600">Thoughtfully sourced and roasted in-house for flavor clarity.</p>
+        </article>
+        <article class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all js-animate" data-animate="true">
+          <div class="mb-2 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-label="Sustainability" stroke="#2563EB" stroke-width="2"><path d="M12 3v6"/><path d="M6 12h6"/><path d="M12 12h6"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold">Sustainably Sourced</h3>
+          <p class="text-sm text-gray-600">Ethical partnerships and direct trade where possible.</p>
+        </article>
+        <article class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all js-animate" data-animate="true">
+          <div class="mb-2 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-label="Community" stroke="#16A34A" stroke-width="2"><path d="M12 3a4 4 0 110 8 4 4 0 010-8z"/><path d="M3 21a9 9 0 0018 0"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold">Warm Community</h3>
+          <p class="text-sm text-gray-600">Cozy spaces, friendly staff, and community events.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured Drinks (Component: MenuCard / ProductCard) -->
+    <section class="max-w-7xl mx-auto px-4 py-12" aria-label="Featured drinks">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-heading">Featured Drinks</h2>
+        <a href="menu.html" class="text-sm text-primary hover:underline">See full menu</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all js-animate" data-animate="true" tabindex="0" aria-label="Caramel Macchiato">
+          <div class="h-40 rounded overflow-hidden bg-gradient-to-br from-yellow-100 to-amber-100"></div>
+          <h3 class="mt-3 text-lg font-semibold">Caramel Macchiato</h3>
+          <p class="text-sm text-gray-600">Vanilla, caramel drizzle, and rich espresso.</p>
+          <div class="mt-2 font-semibold">$4.75</div>
+        </article>
+        <!-- Card 2 -->
+        <article class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all js-animate" data-animate="true" tabindex="0" aria-label="Flat White">
+          <div class="h-40 rounded overflow-hidden bg-gradient-to-br from-pink-100 to-violet-100"></div>
+          <h3 class="mt-3 text-lg font-semibold">Flat White</h3>
+          <p class="text-sm text-gray-600">Fine microfoam, balanced espresso.</p>
+          <div class="mt-2 font-semibold">$4.50</div>
+        </article>
+        <!-- Card 3 -->
+        <article class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all js-animate" data-animate="true" tabindex="0" aria-label="Iced Americano">
+          <div class="h-40 rounded overflow-hidden bg-gradient-to-br from-sky-100 to-blue-100"></div>
+          <h3 class="mt-3 text-lg font-semibold">Iced Americano</h3>
+          <p class="text-sm text-gray-600">Cooling, crisp, perfect for warmer days.</p>
+          <div class="mt-2 font-semibold">$3.95</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup / Promo (Component: NewsletterSignup) -->
+    <section class="bg-white/90 border-t border-b border-gray-200 py-12" aria-label="Newsletter">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <h3 class="text-xl font-heading">Join our Newsletter</h3>
+          <p class="text-sm text-gray-600">Get exclusive promos and seasonal news.</p>
+        </div>
+        <form class="flex items-center w-full md:w-auto" onsubmit="event.preventDefault(); subscribeNewsletter();">
+          <label for="email" class="sr-only">Email</label>
+          <input id="newsletter-email" type="email" required placeholder="Enter your email" class="w-full md:w-72 px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary" />
+          <button id="newsletter-btn" type="submit" class="px-4 py-2 bg-primary text-white rounded-r-md hover:bg-[#5a3a2b] transition-all">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Gallery (Component: Gallery) -->
+    <section class="max-w-7xl mx-auto px-4 py-12" aria-label="Gallery">
+      <h2 class="text-2xl font-heading mb-6">Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="h-28 bg-gradient-to-tr from-yellow-200 to-amber-200 rounded"></div>
+        <div class="h-28 bg-gradient-to-tr from-pink-200 to-fuchsia-200 rounded"></div>
+        <div class="h-28 bg-gradient-to-tr from-green-200 to-teal-200 rounded"></div>
+        <div class="h-28 bg-gradient-to-tr from-blue-200 to-cyan-200 rounded"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Component: Footer) -->
+  <footer class="bg-white/90 border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2 text-sm text-gray-600" aria-label="Footer info">
+        <span>© 2025 Local Coffee</span>
+        <span aria-hidden="true">•</span>
+        <span>Follow us</span>
+        <!-- Inline social icons -->
+        <a href="#" aria-label="Instagram" class="inline-flex p-1 rounded hover:bg-gray-100"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><circle cx="18.5" cy="5.5" r="1.5"/></svg></a>
+      </div>
+      <div class="text-sm text-gray-600">123 Brew Lane, Flavor Town</div>
+    </div>
+  </footer>
+
+  <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-800 text-white px-4 py-2 rounded shadow"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
