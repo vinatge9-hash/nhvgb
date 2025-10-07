@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Coffee - Order Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #F8F3EE; }
+  </style>
+</head>
+<body class="font-sans text-[#1F2937]">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full glass border-b border-white/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2 text-xl font-bold text-primary" aria-label="Home">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-label="Coffee"><path d="M3 6h11a4 4 0 0 1 0 8H3V6Z" stroke="#6D4C41" stroke-width="2"/><path d="M8 6V4a4 4 0 0 1 8 0v2" stroke="#6D4C41" stroke-width="2"/></svg>
+        Local Coffee
+      </a>
+      <nav class="hidden md:flex space-x-4 text-sm" aria-label="Primary">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="menu.html" class="hover:underline">Menu</a>
+        <a href="order-online.html" class="hover:underline">Order Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <section aria-label="Checkout" class="bg-white rounded-xl shadow-md p-6">
+      <h1 class="text-2xl font-heading mb-4">Checkout</h1>
+      <form class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm mb-1" for="name">Name</label>
+          <input id="name" class="w-full border rounded p-2" type="text" placeholder="Your name" />
+        </div>
+        <div>
+          <label class="block text-sm mb-1" for="email2">Email</label>
+          <input id="email2" class="w-full border rounded p-2" type="email" placeholder="you@example.com" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm mb-1" for="pickup">Pickup time</label>
+          <select id="pickup" class="w-full border rounded p-2">
+            <option>Now</option>
+            <option>In 30 minutes</option>
+            <option>In 1 hour</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm mb-1" for="notes">Order notes</label>
+          <textarea id="notes" class="w-full border rounded p-2" rows="3" placeholder="Any dietary preferences or special requests"></textarea>
+        </div>
+      </form>
+      <div class="flex justify-between items-center mt-4">
+        <span class="text-sm text-gray-600">Subtotal: $9.50</span>
+        <button class="px-4 py-2 bg-primary text-white rounded hover:shadow-lg transition-all">Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white/90 border-t border-gray-200 mt-8"></footer>
+
+  <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-800 text-white px-4 py-2 rounded shadow"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
