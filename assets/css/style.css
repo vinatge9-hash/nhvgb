@@ -1,0 +1,5 @@
+/* Custom styles for polished UI (not required by Tailwind CDN) */
+:root {
+  --primary: #6D4C41;
+}
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; }
