@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Coffee - Locations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F8F3EE] text-[#1F2937] font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full glass border-b border-white/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2 text-xl font-bold text-primary" aria-label="Home">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-label="Coffee"><path d="M3 6h11a4 4 0 0 1 0 8H3V6Z" stroke="#6D4C41" stroke-width="2"/><path d="M8 6V4a4 4 0 0 1 8 0v2" stroke="#6D4C41" stroke-width="2"/></svg>
+        Local Coffee
+      </a>
+      <nav class="hidden md:flex space-x-4 text-sm"><a href="index.html" class="hover:underline">Home</a><a href="menu.html" class="hover:underline">Menu</a><a href="order-online.html" class="hover:underline">Order Online</a></nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <section aria-label="Locations" class="mb-6">
+      <h1 class="text-3xl font-heading mb-3">Our Locations</h1>
+      <p class="text-sm text-gray-600">Visit us at multiple cozy spots. Hours vary by location.</p>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Location Card 1 -->
+      <article class="bg-white rounded-xl shadow-md p-4" aria-label="Downtown cafe">
+        <h3 class="font-semibold mb-1">Downtown</h3>
+        <p class="text-sm text-gray-600">123 Brew St, Flavor Town</p>
+        <div class="mt-2 text-sm">Hours: 7am - 7pm</div>
+        <div class="mt-2">
+          <div class="h-40 bg-gradient-to-br from-yellow-100 to-orange-100 rounded"></div>
+        </div>
+      </article>
+      <!-- Location Card 2 -->
+      <article class="bg-white rounded-xl shadow-md p-4" aria-label="Uptown cafe">
+        <h3 class="font-semibold mb-1">Uptown</h3>
+        <p class="text-sm text-gray-600">88 Bean Ave, Flavor Town</p>
+        <div class="mt-2 text-sm">Hours: 8am - 8pm</div>
+        <div class="mt-2"><div class="h-40 bg-gradient-to-br from-pink-100 to-violet-100 rounded"></div></div>
+      </article>
+      <!-- Location Card 3 -->
+      <article class="bg-white rounded-xl shadow-md p-4" aria-label="Riverside cafe">
+        <h3 class="font-semibold mb-1">Riverside</h3>
+        <p class="text-sm text-gray-600">45 River Rd, Flavor Town</p>
+        <div class="mt-2 text-sm">Hours: 9am - 6pm</div>
+        <div class="mt-2"><div class="h-40 bg-gradient-to-br from-green-100 to-teal-100 rounded"></div></div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-white/90 border-t border-gray-200 mt-8 py-6">
+    <div class="max-w-7xl mx-auto px-4 text-sm text-gray-600">© 2025 Local Coffee</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
